@@ -1,0 +1,12 @@
+
+# Using replaced
+
+<placeholder for the configuration example prior to module invocation>
+
+- name: Accept Service Agreements
+  isva_service_agreements:
+    config:
+      accepted: True
+    state: replaced
+
+<placeholder for the configuration example after module invocation>

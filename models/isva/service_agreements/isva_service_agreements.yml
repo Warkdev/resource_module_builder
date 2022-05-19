@@ -1,0 +1,41 @@
+---
+GENERATOR_VERSION: '1.0'
+ANSIBLE_METADATA: |
+    {
+        'metadata_version': '1.1',
+        'status': ['preview'],
+        'supported_by': 'Community'
+    }
+
+NETWORK_OS: isva
+RESOURCE: service_agreements
+COPYRIGHT: Copyright 2022 Cédric Servais
+LICENSE: gpl-3.0.txt
+
+DOCUMENTATION: |
+  module: isva_service_agreements
+  version_added: 2.12
+  short_description: 'Manages the acceptance of agreements attributes of ISVA service agreements.'
+  description: 'Manages the acceptance of agreements attributes of ISVA service agreements'
+  author: Cédric Servais
+  notes:
+    - 'Tested against ISVA Docker v10.0.3.1'
+  options:
+    config:
+      description: The state of the service agreements
+      type: dict
+      suboptions:
+        accepted:
+          type: bool
+          description: The state of the service agreements
+    state:
+      description:
+      - The state the configuration should be left in
+      type: str
+      choices:
+      - gathered
+      - replaced
+      default: replaced
+EXAMPLES:
+  - gathered_example_01.txt
+  - replaced_example_01.txt
